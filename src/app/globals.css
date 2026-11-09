@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #17191d;
+  --color-ink-2: #22252b;
+  --color-brand: #f47732;
+  --color-primary: #0866b8;
+  --color-deep: #07509d;
+  --color-pale: #eaf4fc;
+  --color-sky: #a9d8f5;
+  --color-mist: #f4f6f8;
+  --color-line: #e3e7ec;
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+body { background: #fff; color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@keyframes orbit-spin { to { transform: rotate(360deg); } }
+.orbit-arc { transform-origin: 300px 230px; animation: orbit-spin 48s linear infinite; }
+@keyframes scroll-dot { 0%,100% { transform: translateY(0); opacity: .9; } 60% { transform: translateY(14px); opacity: .2; } }
+.scroll-dot { animation: scroll-dot 2.2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .orbit-arc, .scroll-dot { animation: none; } }
