@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, Figtree } from "next/font/google";
 import "./globals.css";  
-import { MotionProvider } from "@/components/common/Motion";
+import { MotionProvider } from "@/components/common/Motion"; 
  
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora", display: "swap" });
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree", display: "swap" });
